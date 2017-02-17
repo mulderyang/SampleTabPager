@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment1 fragment1;
     Fragment2 fragment2;
     Fragment3 fragment3;
+    Fragment4 fragment4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
+        fragment4 = new Fragment4();
 
         // viewpager
         pager = (ViewPager) findViewById(R.id.viewPager);
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem(fragment1, "첫번째");
         adapter.addItem(fragment2, "두번째");
         adapter.addItem(fragment3, "세번째");
+        adapter.addItem(fragment4, "네번째");
 
         pager.setAdapter(adapter);
 
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         tabs.getTabAt(0).setText(adapter.getPageTitle(0));
         tabs.getTabAt(1).setText(adapter.getPageTitle(1));
         tabs.getTabAt(2).setText(adapter.getPageTitle(2));
+        tabs.getTabAt(3).setText(adapter.getPageTitle(3));
 
         tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
